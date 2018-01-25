@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <head>
-    <meta description = "BusMall Product Research">
+    <meta description = "BusMall Product Shopping Cart">
     <meta charset="utf-8">
-    <title>BusMall Product Research</title>
+    <title>BusMall Shopping Cart</title>
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Macondo|Merriweather|Montserrat|Questrial" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 </head>
 <html>
     <body>
     <section>
-      <h1>Vote for your preferred product</h1>
-      <h2>Instructions</h2>
-      <p>Thank you for participating in our product research. You will be shown three images at a time, 25 times. Each time you see a new set of images, please click on the image you might be most interested in buying. After 25 clicks, you'll see your votes.</p>
-      <p>We greatly appreciate your time in helping BusMall be a success. See you on the bus!</p>
+      <h1>Thank you for shopping with BusMall!</h1>
     </section>
-    <section id = "products-for-vote">
-      <h2>Thanks for clicking on your preferred product</h2>
-      <ul>
-        <li><img id ="product1" src="" alt=""></li>
-        <li><img id ="product2" src="" alt=""></li>
-        <li><img id ="product3" src="" alt=""></li>
+    <section id = "order-summary">
+      <h2>Order Summary</h2>
+      <ul class="order-summary">
       </ul>
     </section>
-    <section>
-      <h1>Your vote results</h1>
+    <h2>Payment Information</h2>
+    <section class = "payment-form">
+      <form action="new-payment-info">
+        <fieldset>
+          <legend>Thank you for entering your details as requested for each field. Please click sumbit when done, only once. </legend>
+          <ul class ="label-order">
+          <li><label for="nameCustomer">Full Customer Name:</label>
+          <input name="nameCustomer" type="text">
+          <li><label for="streetAddress">Street Address:</label></li>
+          <input name="streetAddress" type="text">
+          <li><label for="city">City:</label>
+          <input name="city" type="text"></li>
+          <li><label for="state">State:</label>
+          <input name="state" type="text"></li>
+          <li><label for="zipCode">Zip Code:</label>
+          <input name="zipCode" type="text"></li>
+          <li><label for="phoneNumber">Phone Number:</label>
+          <input name="phoneNumber" type="text"></li>
+          <li><label for="creditCard">Credit Card number:</label>
+          <input name="creditCard" type="number"></li>
+        </ul>
+        </fieldset>
+      </form>
     </section>
-    <h2>Number of votes and displays per product</h2>
-    <section class = "chart">
-      <canvas id="product-vote-chart" height="300px" width="600px"></canvas>
-    </section>
-    <section class="table">
-      <h2>Full data per product with click rate</h2>
-      <table id = "product-data"> </table>
+    <section class="button">
+      <button class ="shrink" id="order-button">Process Order</button>
     </section>
     <section class="footer">
       <p><i>Please note that all content is property of BusMall, LLC</i></p>
