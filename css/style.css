@@ -39,55 +39,51 @@ h2 {
   margin-bottom: 40px;
 }
 
-section.spacer{
-  height: 60px;
-  line-height: 3rem;
+fieldset {
+  display: inline-block;
+
+}
+legend {
+  font-size: 18px;
+  color: white;
+  margin: 15px;
+  padding: 10 px;
+  border: bisque;
+}
+form, label {
+  color:white;
+  font-family: 'Monteserrat', sans-serif;
+  line-height: 2.5rem;
+  border: 3px, grey;
+  margin:15px;
+}
+
+input{
+  background: whitesmoke;
+  color: slategray;
+  margin: 15px;
+}
+
+ul li {
+  display: inline-block;
 }
 
 button{
-  background:slateblue;
+  background:slategray;
   font-family: Georgia, serif;
   font-size: 16px;
   color: white;
   padding:24px;
-
-}
-section.chart{
   margin: 30px;
+}
+
+.shrink:focus,{
+  transform: scale(0.6);
+}
+
+.shrink {
   background: white;
-  font-size: 14px;
-}
-
-table.product-data {
-  empty-cells: hide;
-  font-family: 'Montserrat', sans-serif;
-  max-width: 100%;
-  border-collapse: separate;
-
-}
-
-td,tr {
-  padding: 15px;
-  margin: 10px;
-  border: .1px solid rgb(31, 27, 60);
-}
-
-tr{
-  background: white;
-  color: grey;
-}
-
-r td:first-child{
-  background:grey;
-  color: white;
-}
-
-th {
-	background-color: white;
-  color: rgb(31, 27, 60);
-  border: 1px solid slategray;
-  padding: 10px;
-  margin: 5px;
+  color: gray;
 }
 
 section.footer {
