@@ -6,39 +6,56 @@
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Macondo|Merriweather|Montserrat|Questrial" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    
 </head>
 <html>
     <body>
     <section>
-      <h1>Vote for your preferred product</h1>
+      <h1>Welcome to Busmall, your online store for the cool and unusual!</h1>
       <h2>Instructions</h2>
-      <p>Thank you for participating in our product research. You will be shown three images at a time, 25 times. Each time you see a new set of images, please click on the image you might be most interested in buying. After 25 clicks, you'll see your votes.</p>
-      <p>We greatly appreciate your time in helping BusMall be a success. See you on the bus!</p>
+      <p>Below we have a list of all the wonderful products as seen in the Busmall catalog! Any of these wonderful items can be yours for the low low price of $999.</p>
+      
     </section>
+
     <section id = "products-for-vote">
-      <h2>Thanks for clicking on your preferred product</h2>
-      <ul>
-        <li><img id ="product1" src="" alt=""></li>
-        <li><img id ="product2" src="" alt=""></li>
-        <li><img id ="product3" src="" alt=""></li>
-      </ul>
+      <h2>Select the products you wish to purchase:</h2>
+      
+      <div class="dropdown">
+        <button onclick="dropdownFunction()" class="dropbutton">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">R2D2 bag</a>
+          <a href="#">banana cutter</a>
+          <a href="#">bathroom ipad stand</a>
+          <a href="#">rainboots with exposed toes</a>
+          <a href="#">tiny breaky cooker</a>
+          <a href="#">meat gum</a>
+          <a href="#">rounded chair</a>
+          <a href="#">cthulhu monster figure</a>
+          <a href="#">duck bill for dogs</a>
+          <a href="#">dragon meat</a>
+          <a href="#">silverware pens</a>
+          <a href="#">pet foot brooms</a>
+          <a href="#">pizza scissors</a>
+          <a href="#">shark sleeping bag</a>
+          <a href="#">baby sweep outfit</a>
+          <a href="#">tauntaun sleeping bag</a>
+          <a href="#">unicorn meat</a>
+          <a href="#">tentacle usb</a>
+          <a href="#">looped water can</a>
+          <a href="#">wine glass</a>
+        </div>
+      </div>
+
+      <h2>Go to Cart</h2>
+
     </section>
-    <section>
-      <h1>Your vote results</h1>
-    </section>
-    <h2>Number of votes and displays per product</h2>
-    <section class = "chart">
-      <canvas id="product-vote-chart" height="300px" width="600px"></canvas>
-    </section>
-    <section class="table">
-      <h2>Full data per product with click rate</h2>
-      <table id = "product-data"> </table>
-    </section>
+
+
     <section class="footer">
       <p><i>Please note that all content is property of BusMall, LLC</i></p>
       <p>&copy; Copyright 2018 </p>
     </section>
+
     <script type ="text/javascript" src="js/app.js"></script>
     </body>
 </html>
