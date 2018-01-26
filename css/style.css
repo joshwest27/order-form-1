@@ -14,7 +14,6 @@ p {
   margin: 10px;
 }
 li {
-  display: inline;
   margin: 60px,15px,30px,15px;
   padding: 5px;
   border: 2px grey;
@@ -50,6 +49,7 @@ legend {
   padding: 10 px;
   border: bisque;
 }
+
 form, label {
   color:white;
   font-family: 'Monteserrat', sans-serif;
@@ -95,7 +95,19 @@ section.footer {
   text-align: center;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
 .show {
   display:block;
