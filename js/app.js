@@ -51,37 +51,60 @@ new Images('tentacle usb', 'img/usb.gif');
 new Images('looped water can', 'img/water-can.jpg');
 new Images('wine glass', 'img/wine-glass.jpg');
 
- //LOCAL STORAGE
- var multipleSurveysTotal = [];
+//LOCAL STORAGE
+var multipleSurveysTotal = [];
 
- if (localStorage.votesInStorage) {
-   for (var j = 0; j < productVotes.length; j++) {
+if (localStorage.votesInStorage) {
+  for (var j = 0; j < productVotes.length; j++) {
 
-     multipleSurveysTotal[j] = productVotes[j] + JSON.parse(localStorage.votesInStorage)[j];
-   }
- } else {
-   multipleSurveysTotal = productVotes;
- }
- localStorage.votesInStorage = JSON.stringify(multipleSurveysTotal);
+    multipleSurveysTotal[j] = productVotes[j] + JSON.parse(localStorage.votesInStorage)[j];
+  }
+} else {
+  multipleSurveysTotal = productVotes;
+}
+localStorage.votesInStorage = JSON.stringify(multipleSurveysTotal);
 
- 
 
 //When the user clicks on the button, toggle between hiding and showing the dropdown
 function dropdownFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById('myDropdown').classList.toggle('show');
 }
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
-if (!event.target.matches('.dropbutton')) {
+  if (!event.target.matches('.dropbutton')) {
 
-  var dropdowns = document.getElementsByClassName("dropdown-content");
-  var i;
-  for (i = 0; i < dropdowns.length; i++) {
-    var openDropdown = dropdowns[i];
-    if (openDropdown.classList.contains('show')) {
-      openDropdown.classList.remove('show');
+    var dropdowns = document.getElementsByClassName('dropdown-content');
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
     }
   }
+};
+//populate top of cart page with ordered item information
+
+//get the locally stored ordered item  and quantity
+if(localStorage.orderedItemCart){
+  itemCart = JSON.parse(localStorage.getItem('orderedItemCart'));
+  quantityCart = JSON.parse(localStorage.getItem('orderedQuantityCart'));
 }
+else {
+  var ulElement = document.getElementById('order-summary');
+  ulElement.textContent = 'Sorry there is no record of you selecting any items.';
 }
+
+//display ordered items and quantity on the page
+var ulElement = document.getElementById('order-summary');
+var liElement = document.createElement('li');
+
+for(var i in itemCart)
+
+
+
+
+//create event listener for clicks on images
+sectionElement.addEventListener('click', manageClick);
+
